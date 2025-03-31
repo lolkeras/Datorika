@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('https://cdn.glitch.global/03c8289f-7ec0-49f2-b0eb-162f7d441bc9/cipari.jpg?v=1743153836090');
+           background-size: contain; 
+  background-repeat: repeat; 
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 550px;
+            padding: -10px;
+            background-color: rgb(220, 220, 0);
+            font-size: 20px;
+        }
+        input {
+            width: 120px;
+        }
+        button {
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function convert() {
+            let gb = document.getElementById("gb").value;
+            document.getElementById("mb").value = gb * 1000;
+            document.getElementById("mib").value = (gb * 1024).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <div class="container">
+        <form>
+            <p>
+                <input type="number" id="gb" value="2"> GB =
+            </p>
+            <p>
+                <button type="button" onclick="convert()">Izteikt megabaitos</button>
+                <input type="text" id="mb" readonly> MB
+            </p>
+            <p>
+                <button type="button" onclick="convert()">Izteikt mibibaitos</button>
+                <input type="text" id="mib" readonly> MiB
+            </p>
+        </form>
+    </div>
+  <footer
+      class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge"
+    >
+      <a href="index.html"> <h3 align="center" class="veidots">Atpakaļ uz portfolio</h3></a>
+    </footer>
+</body>
+</html>
